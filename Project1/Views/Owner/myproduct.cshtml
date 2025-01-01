@@ -1,0 +1,36 @@
+﻿@model Project1.ViewModels.ListOfInfo
+@{
+    ViewData["Title"] = "AddProduct ";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/Home/MenProduct.css" rel="stylesheet" />
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Top Sale Product
+            </h2>
+        </div>
+        <div class="product_container">
+
+            @foreach (var product in Model.products)
+            {
+                <div class="box">
+                    <div class="box-content">
+                        <div class="img-box">
+                            <img src="~/File/@product.Image" />
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <a asp-action="EditProductAsync" asp-controller="Owner" style="margin-right: 10px;">
+                            Edit
+                        </a>
+                        <a asp-action="DeleteProduct" asp-controller="Owner" asp-route-id="@product.Id">Delete </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

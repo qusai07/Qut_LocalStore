@@ -1,0 +1,84 @@
+﻿@model Project1.ViewModels.BuyProductModel;
+@{
+    ViewData["Title"] = "BuyProduct ";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Buy Product </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <div id="form-message-warning" class="mb-4"></div>
+                                <form asp-action="BuyProduct" method="post" asp-controller="Home" enctype="multipart/form-data" asp-route-ProductName="@Model.ProductName" asp-route-price="@Model.ProductPrice">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="NameUser">Full Name</label>
+                                                <input class="form-control" type="text" asp-for="NameUser" placeholder="Full Name">
+                                                <span asp-validation-for="NameUser" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="EmailBuyer">Your Email</label>
+                                                <input class="form-control" type="text" asp-for="EmailBuyer" placeholder="Your Emai">
+                                                <span asp-validation-for="EmailBuyer" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="NumberBuyer">Your Number</label>
+                                                <input class="form-control" type="text" asp-for="NumberBuyer" placeholder="Your Numer">
+                                                <span asp-validation-for="NumberBuyer" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="ProductDescription">Product Description</label>
+                                                <textarea asp-for="ProductDescription" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                                                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-primary" style="background-color: #c6d9f3; border-color: #c6d9f3 ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+                            <div class="info-wrap bg-primary w-100 p-md-5 p-4" style="background-color: #c6d9f3 !important;">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                         <label class="label"> <p>Product Name: @Model.ProductName</p></label>
+                                         <label class="label"> <p>Product Price: @Model.ProductPrice</p></label>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center pt5" style="margin-top: 50px;">
+        <a class="txt2" style="color:gray" asp-action="Index" asp-controller="Home" >
+            Back To Home
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+        </a>
+    </div>
+</section>

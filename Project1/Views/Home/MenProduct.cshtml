@@ -1,0 +1,392 @@
+﻿@model Project1.ViewModels.ListOfInfo
+@{
+    ViewData["Title"] = "Men Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h1>@ViewData["Title"]</h1>
+<link href="~/css/Home/MenProduct.css" rel="stylesheet" />
+<p>Use this page to detail your site's Men Product.</p>
+<!-- product section -->
+
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+            <h2>
+                Top Sale Product
+            </h2>
+        </div>
+        <div class="product_container">
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/w1.png" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Watch
+                            </h6>
+                            <h5>
+                                <span>$</span> 300
+                            </h5>
+                        </div>
+                        <div class="like">
+                            <h6>
+                                Like
+                            </h6>
+                            <div class="star_container">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a asp-action="BuyProduct" asp-controller="Home" asp-route-productName="Men Watch" asp-route-price="300" >
+                        Buy
+                    </a>
+                </div>
+            </div>
+            @foreach (var product in Model.products)
+            {
+                <div class="box">
+                    <div class="box-content">
+                        <div class="img-box">
+                            <img src="~/File/@product.Image"/>
+                        </div>
+                        <div class="detail-box">
+                            <div class="text">
+                                <h6>
+                                    @product.Name
+                                </h6>
+                                <h5>
+                                    <span>$</span> @product.Price
+                                </h5>
+                            </div>
+                            <div class="like">
+                                <h6>
+                                    Like
+                                </h6>
+                                <div class="star_container">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <a asp-action="BuyProduct" asp-controller="Home"asp-route-productName="@product.Name" asp-route-price="@product.Price" >
+                            Buy
+                        </a>
+                    </div>
+                </div>
+
+
+            }
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/w2.png" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Watch
+                            </h6>
+                            <h5>
+                                <span>$</span> 300
+                            </h5>
+                        </div>
+                        <div class="like">
+                            <h6>
+                                Like
+                            </h6>
+                            <div class="star_container">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a asp-action="BuyProduct" asp-controller="Home" asp-route-productName="Men Watch" asp-route-price="300">
+                        Buy
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/w3.png" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Watch
+                            </h6>
+                            <h5>
+                                <span>$</span> 300
+                            </h5>
+                        </div>
+                        <div class="like">
+                            <h6>
+                                Like
+                            </h6>
+                            <div class="star_container">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a asp-action="BuyProduct" asp-controller="Home" asp-route-productName="Men Watch" asp-route-price="300">
+                        Buy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end product section -->
+<!-- product section -->
+<section class="product_section ">
+    <div class="container">
+        <div class="product_heading">
+        </div>
+        <div class="product_container">
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/w1.png" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Watchs
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a asp-action="BuyProduct" asp-controller="Home" asp-route-productName="Men Watch" asp-route-price="300">
+                        Buy
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Perfume.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Perfume
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Accessories.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Accessories
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/underwear.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's underwear
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/w1.png" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Shirts
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Footwear.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Footwear
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Activewear.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Activewear
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Suits.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Suits
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Shirts.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Shirts
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <div class="box-content">
+                    <div class="img-box">
+                        <img src="~/Pic/MenProduct/Jackets and Coats.jpg" />
+                    </div>
+                    <div class="detail-box">
+                        <div class="text">
+                            <h6>
+                                Men's Jackets and Coats
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end product section -->

@@ -1,0 +1,95 @@
+﻿@model Project1.ViewModels.ProductView.CreateOwner
+
+@{
+    ViewData["Title"] = "Create Owner";
+    Layout = "~/Views/Shared/_LayoutDahsBoard.cshtml";
+
+
+}
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Create Owner </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <div id="form-message-warning" class="mb-4"></div>
+                                <form asp-action="CreateOwner" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="Name">Full Name</label>
+                                                <input type="text" class="form-control" name="name" asp-for="Name" placeholder="Name">
+                                                <span asp-validation-for="Name" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="Email">Email Address</label>
+                                                <input type="email" class="form-control" name="email" asp-for="Email" placeholder="Email">
+                                                <span asp-validation-for="Email" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="NormalizedUserName">UserName</label>
+                                                <input type="text" class="form-control" asp-for="NormalizedUserName" placeholder="User Name">
+                                                <span asp-validation-for="NormalizedUserName" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="Password">Password</label>
+                                                <input type="password" class="form-control" asp-for="Password" placeholder="Password">
+                                                <span asp-validation-for="Password" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="ConfPassword">Confirm Password</label>
+                                                <input type="password" class="form-control" asp-for="ConfPassword" placeholder="Confirm Password">
+                                                <span asp-validation-for="ConfPassword" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" asp-for="PhoneNumebr">Mobile Number</label>
+                                                <input type="text" class="form-control" asp-for="PhoneNumebr" placeholder="Mobile Number">
+                                                <span asp-validation-for="PhoneNumebr" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-primary" style="background-color: #c6d9f3; border-color: #c6d9f3 ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+                            <div class="info-wrap bg-primary w-100 p-md-5 p-4" style="background-color: #c6d9f3 !important;">
+                                <div class="d-flex justify-content-center">
+                                    <img src="~/Pic/QUT FASHION.png" class="img-fluid" alt="QUT Fashion" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
